@@ -13,7 +13,10 @@ public class BaseController {
 		} else {
 			filePath = "/common/messages_" + lang.split(",")[0] + ".properties";
 		}
+		System.out.println("Hello How Are You");
+		System.out.println(filePath);
 		Properties properties = new Properties();
+		System.err.println(properties);
 		try {
 			InputStream fis = BaseController.class.getResourceAsStream(filePath);
 			properties.load(fis);
