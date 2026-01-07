@@ -34,13 +34,13 @@ public class HomeController {
 		byte[] imageContent = null;
 		try {
 			photoFile = fileUploadService.readFile(type, id, identityDocumentType);
-			System.out.println("===>" + photoFile);
+
 			if (photoFile != null) {
 				InputStream in1 = new FileInputStream(photoFile);
 				imageContent = IOUtils.toByteArray(in1);
 			}
-			System.err.println("===="+imageContent);
 		} catch (Exception e) {
+
 			e.printStackTrace();
 		}
 		final HttpHeaders headers = new HttpHeaders();
